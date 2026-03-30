@@ -4,10 +4,24 @@ import { GOOGLE_PLAY_URL, APP_STORE_URL } from "../App"
 export default function Navbar() {
     const [scrolled, setScrolled] = useState(false)
     const [menuOpen, setMenuOpen] = useState(false)
+    const [downloadUrl, setDownloadUrl] = useState(GOOGLE_PLAY_URL)
 
     useEffect(() => {
         const handler = () => setScrolled(window.scrollY > 20)
         window.addEventListener('scroll', handler)
+
+        const userAgent = navigator.userAgent || navigator.vendor || (window as any).opera;
+        const platform = navigator.platform;
+
+        // iOS
+        if (/iPad|iPhone|iPod/.test(userAgent) && !(window as any).MSStream) {
+            setDownloadUrl(APP_STORE_URL);
+        }
+        // macOS
+        else if (/Mac/.test(platform)) {
+            setDownloadUrl(APP_STORE_URL);
+        }
+
         return () => window.removeEventListener('scroll', handler)
     }, [])
 
@@ -16,17 +30,15 @@ export default function Navbar() {
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-16">
                     <a href="#" className="flex items-center gap-2.5 no-underline">
-                        <div className="w-8 h-8 bg-primary rounded-lg shadow-sm flex items-center justify-center">
-                            <span className="text-white font-bold text-sm">N</span>
-                        </div>
+                        <img src="/logoIcon.svg" alt="E-Novel Logo" className="w-9 h-9 object-contain" />
                         <span className="text-lg font-bold text-text-main">E-Novel</span>
                     </a>
 
                     <div className="hidden md:flex items-center gap-8">
-                        <a href="#features" className="text-sm font-medium text-text-muted hover:text-primary             transition-colors">Tính năng</a>
+                        <a href="#features" className="text-sm font-medium text-text-muted hover:text-primary transition-colors">Tính năng</a>
                         <a href="#download" className="text-sm font-medium text-text-muted hover:text-primary transition-colors">Tải app</a>
                         <a href="#contact" className="text-sm font-medium text-text-muted hover:text-primary transition-colors">Liên hệ</a>
-                        <a href={GOOGLE_PLAY_URL} target="_blank" rel="noopener noreferrer" className="bg-primary text-white text-sm font-semibold px-5 py-2 rounded-full hover:bg-primary-dark transition-colors shadow-md hover:shadow-lg">
+                        <a href={downloadUrl} target="_blank" rel="noopener noreferrer" className="bg-primary text-white text-sm font-semibold px-5 py-2 rounded-full hover:bg-primary-dark transition-colors shadow-md hover:shadow-lg">
                             Tải ngay
                         </a>
                     </div>
@@ -47,10 +59,10 @@ export default function Navbar() {
 
                 {menuOpen && (
                     <div className="md:hidden bg-white rounded-2xl shadow-xl mt-2 p-4 border border-border-light">
-                        <a href="#features" onClick={() => setMenuOpen(false)} className="block py-3 px-4 text-sm font-medium text-text-main hover:bg-bg-section rounded-lg             transition-colors">Tính năng</a>
+                        <a href="#features" onClick={() => setMenuOpen(false)} className="block py-3 px-4 text-sm font-medium text-text-main hover:bg-bg-section rounded-lg transition-colors">Tính năng</a>
                         <a href="#download" onClick={() => setMenuOpen(false)} className="block py-3 px-4 text-sm font-medium text-text-main hover:bg-bg-section rounded-lg transition-colors">Tải app</a>
                         <a href="#contact" onClick={() => setMenuOpen(false)} className="block py-3 px-4 text-sm font-medium text-text-main hover:bg-bg-section rounded-lg transition-colors">Liên hệ</a>
-                        <a href={GOOGLE_PLAY_URL} target="_blank" rel="noopener noreferrer" className="block mt-2 bg-primary text-white text-sm font-semibold px-5 py-3 rounded-xl text-center hover:bg-primary-dark transition-colors">
+                        <a href={downloadUrl} target="_blank" rel="noopener noreferrer" className="block mt-2 bg-primary text-white text-sm font-semibold px-5 py-3 rounded-xl text-center hover:bg-primary-dark transition-colors">
                             Tải ngay
                         </a>
                     </div>
