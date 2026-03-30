@@ -43,7 +43,7 @@ export default function ScreenshotsSection() {
     }, [active])
 
     return (
-        <section className="py-20 lg:py-28" style={{ background: 'linear-gradient(180deg, #ffffff 0%, #f8f4ff 100%)' }}>
+        <section className="py-20 lg:py-28" style={{ background: 'linear-gradient(180deg, #f8f4ff 0%, #ffffff 100%)' }}>
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
                     <span className="inline-block text-xs font-semibold text-primary bg-primary/5 px-4 py-1.5 rounded-full mb-4 uppercase tracking-wider">Giao diện</span>

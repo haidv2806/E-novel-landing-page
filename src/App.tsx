@@ -5,6 +5,7 @@ import LibraryStatsSection from './constants/LibraryStatsSection'
 import TTSHighlightSection from './constants/TTSHighlightSection'
 import HowItWorksSection from './constants/HowItWorksSection'
 import ScreenshotsSection from './constants/ScreenshotsSection'
+import CommunitySection from './constants/CommunitySection'
 import DownloadCTA from './constants/DownloadCTA'
 import Footer from './constants/Footer'
 import './App.css'
@@ -21,8 +22,9 @@ function App() {
       <FeaturesSection />
       <LibraryStatsSection />
       <TTSHighlightSection />
-      <HowItWorksSection />
+      <CommunitySection />
       <ScreenshotsSection />
+      <HowItWorksSection />
       <DownloadCTA />
       <Footer />
     </div>
