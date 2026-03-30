@@ -40,15 +40,15 @@ function Navbar() {
           </a>
 
           <div className="hidden md:flex items-center gap-8">
-            <a href="#features" className="text-sm font-medium text-text-muted hover:text-primary transition-colors">Tinh nang</a>
-            <a href="#download" className="text-sm font-medium text-text-muted hover:text-primary transition-colors">Tai app</a>
-            <a href="#contact" className="text-sm font-medium text-text-muted hover:text-primary transition-colors">Lien he</a>
+            <a href="#features" className="text-sm font-medium text-text-muted hover:text-primary             transition-colors">Tính năng</a>
+                        <a href="#download" className="text-sm font-medium text-text-muted hover:text-primary transition-colors">Tải app</a>
+                        <a href="#contact" className="text-sm font-medium text-text-muted hover:text-primary transition-colors">Liên hệ</a>
             <a href={GOOGLE_PLAY_URL} target="_blank" rel="noopener noreferrer" className="bg-primary text-white text-sm font-semibold px-5 py-2 rounded-full hover:bg-primary-dark transition-colors shadow-md hover:shadow-lg">
-              Tai ngay
-            </a>
-          </div>
+                        Tải ngay
+                      </a>
+                    </div>
 
-          <button
+                    <button
             className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle menu"
@@ -64,15 +64,15 @@ function Navbar() {
 
         {menuOpen && (
           <div className="md:hidden bg-white rounded-2xl shadow-xl mt-2 p-4 border border-border-light">
-            <a href="#features" onClick={() => setMenuOpen(false)} className="block py-3 px-4 text-sm font-medium text-text-main hover:bg-bg-section rounded-lg transition-colors">Tinh nang</a>
-            <a href="#download" onClick={() => setMenuOpen(false)} className="block py-3 px-4 text-sm font-medium text-text-main hover:bg-bg-section rounded-lg transition-colors">Tai app</a>
-            <a href="#contact" onClick={() => setMenuOpen(false)} className="block py-3 px-4 text-sm font-medium text-text-main hover:bg-bg-section rounded-lg transition-colors">Lien he</a>
+            <a href="#features" onClick={() => setMenuOpen(false)} className="block py-3 px-4 text-sm font-medium text-text-main hover:bg-bg-section rounded-lg             transition-colors">Tính năng</a>
+                        <a href="#download" onClick={() => setMenuOpen(false)} className="block py-3 px-4 text-sm font-medium text-text-main hover:bg-bg-section rounded-lg transition-colors">Tải app</a>
+                        <a href="#contact" onClick={() => setMenuOpen(false)} className="block py-3 px-4 text-sm font-medium text-text-main hover:bg-bg-section rounded-lg transition-colors">Liên hệ</a>
             <a href={GOOGLE_PLAY_URL} target="_blank" rel="noopener noreferrer" className="block mt-2 bg-primary text-white text-sm font-semibold px-5 py-3 rounded-xl text-center hover:bg-primary-dark transition-colors">
-              Tai ngay
-            </a>
-          </div>
-        )}
-      </div>
+                    Tải ngay
+                  </a>
+                </div>
+              )}
+            </div>
     </nav>
   )
 }
@@ -92,16 +92,16 @@ function HeroSection() {
           <div className="animate-fade-in-up">
             <div className="inline-flex items-center gap-2 bg-white/60 backdrop-blur-sm rounded-full px-4 py-1.5 mb-6 border border-primary/10">
               <span className="w-2 h-2 bg-green-400 rounded-full"></span>
-              <span className="text-xs font-medium text-text-muted">Mien phi tren Google Play</span>
+              <span className="text-xs font-medium text-text-muted">Miễn phí trên Google Play</span>
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-text-main leading-tight mb-6">
-              Doc truyen moi luc,{' '}
-              <span className="gradient-text">nghe truyen moi noi</span>
+                            Đọc truyện mọi lúc,{' '}
+                            <span className="gradient-text">nghe truyện mọi nơi</span>
             </h1>
 
             <p className="text-lg text-text-muted leading-relaxed mb-8 max-w-lg">
-              Trai nghiem doc va nghe truyen tuyet voi voi AI Text-to-Speech, doc offline, va cong dong doc gia soi dong.
+              Trải nghiệm đọc và nghe truyện tuyệt vời với AI Text-to-Speech, đọc offline, và cộng đồng độc giả sôi động.
             </p>
 
             <div className="flex flex-wrap gap-4">
@@ -123,7 +123,7 @@ function HeroSection() {
                 <svg className="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
                 <svg className="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
               </div>
-              <span className="text-xs text-text-muted">Yeu thich boi hang ngan doc gia</span>
+              <span className="text-xs text-text-muted">Yêu thích bởi hàng ngàn độc giả</span>
             </div>
           </div>
 
@@ -134,7 +134,7 @@ function HeroSection() {
                   <div className="absolute top-0 left-1/2 -translate-x-1/2 w-28 h-6 bg-text-main rounded-b-2xl"></div>
                   <img src="/icon.png" alt="E-Novel Logo" className="w-20 h-20 mb-4 opacity-80" />
                   <span className="text-lg font-bold text-text-main">E-Novel</span>
-                  <span className="text-xs text-text-muted mt-1">Doc & Nghe truyen</span>
+                  <span className="text-xs text-text-muted mt-1">Đọc & Nghe truyện</span>
                   <div className="mt-6 space-y-2 w-4/5">
                     <div className="h-3 bg-primary/10 rounded-full w-full"></div>
                     <div className="h-3 bg-primary/10 rounded-full w-3/4"></div>
@@ -150,7 +150,7 @@ function HeroSection() {
                   </div>
                   <div>
                     <div className="text-xs font-semibold text-text-main">AI TTS</div>
-                    <div className="text-[10px] text-text-muted">Dang phat...</div>
+                    <div className="text-[10px] text-text-muted">Đang phát...</div>
                   </div>
                 </div>
               </div>
@@ -161,7 +161,7 @@ function HeroSection() {
                   </div>
                   <div>
                     <div className="text-xs font-semibold text-text-main">Offline</div>
-                    <div className="text-[10px] text-text-muted">Da luu</div>
+                    <div className="text-[10px] text-text-muted">Đã lưu</div>
                   </div>
                 </div>
               </div>
@@ -179,48 +179,48 @@ const features = [
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
     ),
-    title: 'Trinh doc tuy chinh',
-    desc: 'Tu do chon font, co chu, mau nen, che do sang/toi de doc thoai mai nhat.',
+        title: 'Trình đọc tùy chỉnh',
+        desc: 'Tự do chọn font, cỡ chữ, màu nền, chế độ sáng/tối để đọc thoải mái nhất.',
     color: 'bg-purple-50 text-purple-600',
   },
   {
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" /></svg>
     ),
-    title: 'AI Text-to-Speech',
-    desc: 'Nghe truyen voi giong doc tu nhien tu F5-TTS, Valtec offline va System TTS.',
+        title: 'AI Text-to-Speech',
+        desc: 'Nghe truyện với giọng đọc tự nhiên từ F5-TTS, Valtec offline và System TTS.',
     color: 'bg-blue-50 text-blue-600',
   },
   {
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
     ),
-    title: 'Doc Offline',
-    desc: 'Luu truyen vao thiet bi voi SQLite & FileSystem, doc bat cu luc nao.',
+        title: 'Đọc Offline',
+        desc: 'Lưu truyện vào thiết bị với SQLite & FileSystem, đọc bất cứ lúc nào.',
     color: 'bg-green-50 text-green-600',
   },
   {
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
     ),
-    title: 'Tim kiem nang cao',
-    desc: 'Full-text search, loc theo the loai, tac gia de tim truyen phu hop.',
+        title: 'Tìm kiếm nâng cao',
+        desc: 'Full-text search, lọc theo thể loại, tác giả để tìm truyện phù hợp.',
     color: 'bg-orange-50 text-orange-600',
   },
   {
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" /></svg>
     ),
-    title: 'Cong dong Real-time',
-    desc: 'Chat, binh luan, thao luan truc tiep voi Socket.IO realtime.',
+        title: 'Cộng đồng Real-time',
+        desc: 'Chat, bình luận, thảo luận trực tiếp với Socket.IO realtime.',
     color: 'bg-pink-50 text-pink-600',
   },
   {
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" /></svg>
     ),
-    title: 'Dark Mode',
-    desc: 'Che do toi bao ve mat, doc thoai mai vao ban dem.',
+        title: 'Dark Mode',
+        desc: 'Chế độ tối bảo vệ mắt, đọc thoải mái vào ban đêm.',
     color: 'bg-slate-100 text-slate-600',
   },
 ]
@@ -231,9 +231,9 @@ function FeaturesSection() {
     <section id="features" ref={ref} className="py-20 lg:py-28 bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <span className="inline-block text-xs font-semibold text-primary bg-primary/5 px-4 py-1.5 rounded-full mb-4 uppercase tracking-wider">Tinh nang</span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-text-main mb-4">Trai nghiem doc truyen toan dien</h2>
-          <p className="text-text-muted text-lg max-w-2xl mx-auto">Moi thu ban can de tan huong the gioi truyen, tu doc den nghe, tu online den offline.</p>
+          <span className="inline-block text-xs font-semibold text-primary bg-primary/5 px-4 py-1.5           rounded-full mb-4 uppercase tracking-wider">Tính năng</span>
+                    <h2 className="text-3xl sm:text-4xl font-extrabold text-text-main mb-4">Trải nghiệm đọc truyện toàn diện</h2>
+                    <p className="text-text-muted text-lg max-w-2xl mx-auto">Mọi thứ bạn cần để tận hưởng thế giới truyện, từ đọc đến nghe, từ online đến offline.</p>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((f, i) => (
@@ -260,29 +260,29 @@ const ttsLevels = [
   {
     level: 'Online',
     engine: 'F5-TTS',
-    desc: 'Giong noi AI chat luong cao, tu nhien nhat. Can ket noi internet.',
-    icon: '🌐',
-    features: ['Giong doc tu nhien, cam xuc', 'Ho tro nhieu giong noi', 'Chat luong studio'],
-    color: 'from-purple-500 to-blue-500',
-    badge: 'Chat luong tot nhat',
+        desc: 'Giọng nói AI chất lượng cao, tự nhiên nhất. Cần kết nối internet.',
+        icon: '🌐',
+        features: ['Giọng đọc tự nhiên, cảm xúc', 'Hỗ trợ nhiều giọng nói', 'Chất lượng studio'],
+        color: 'from-purple-500 to-blue-500',
+        badge: 'Chất lượng tốt nhất',
   },
   {
     level: 'Offline',
     engine: 'Valtec',
-    desc: 'Neural TTS chay ngay tren thiet bi, khong can mang.',
-    icon: '📱',
-    features: ['Khong can internet', 'Neural network tren may', 'Toc do nhanh'],
-    color: 'from-blue-500 to-teal-500',
-    badge: 'Khong can mang',
+        desc: 'Neural TTS chạy ngay trên thiết bị, không cần mạng.',
+        icon: '📱',
+        features: ['Không cần internet', 'Neural network trên máy', 'Tốc độ nhanh'],
+        color: 'from-blue-500 to-teal-500',
+        badge: 'Không cần mạng',
   },
   {
     level: 'System',
     engine: 'System TTS',
-    desc: 'Su dung TTS co san cua thiet bi, luon san sang.',
-    icon: '⚙️',
-    features: ['Co san tren moi thiet bi', 'Tiet kiem tai nguyen', 'Hoat dong moi luc'],
-    color: 'from-teal-500 to-green-500',
-    badge: 'Luon san sang',
+        desc: 'Sử dụng TTS có sẵn của thiết bị, luôn sẵn sàng.',
+        icon: '⚙️',
+        features: ['Có sẵn trên mọi thiết bị', 'Tiết kiệm tài nguyên', 'Hoạt động mọi lúc'],
+        color: 'from-teal-500 to-green-500',
+        badge: 'Luôn sẵn sàng',
   },
 ]
 
@@ -292,9 +292,9 @@ function TTSHighlightSection() {
     <section ref={ref} className="py-20 lg:py-28" style={{ background: 'linear-gradient(180deg, #f8f4ff 0%, #ffffff 100%)' }}>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <span className="inline-block text-xs font-semibold text-primary bg-primary/5 px-4 py-1.5 rounded-full mb-4 uppercase tracking-wider">Text-to-Speech</span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-text-main mb-4">3 cap do nghe truyen</h2>
-          <p className="text-text-muted text-lg max-w-2xl mx-auto">Tu AI cao cap den TTS he thong, luon co giai phap phu hop moi hoan canh.</p>
+          <span className="inline-block text-xs font-semibold text-primary bg-primary/5 px-4 py-1.5 rounded-full mb-4           uppercase tracking-wider">Text-to-Speech</span>
+                    <h2 className="text-3xl sm:text-4xl font-extrabold text-text-main mb-4">3 cấp độ nghe truyện</h2>
+                    <p className="text-text-muted text-lg max-w-2xl mx-auto">Từ AI cao cấp đến TTS hệ thống, luôn có giải pháp phù hợp mọi hoàn cảnh.</p>
         </div>
         <div className="grid md:grid-cols-3 gap-6">
           {ttsLevels.map((t, i) => (
@@ -329,24 +329,24 @@ function TTSHighlightSection() {
 const steps = [
   {
     step: '01',
-    title: 'Tai app',
-    desc: 'Tai E-Novel mien phi tu Google Play hoac App Store.',
+        title: 'Tải app',
+        desc: 'Tải E-Novel miễn phí từ Google Play hoặc App Store.',
     icon: (
       <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
     ),
   },
   {
     step: '02',
-    title: 'Kham pha',
-    desc: 'Tim kiem va kham pha kho truyen da dang theo the loai.',
+        title: 'Khám phá',
+        desc: 'Tìm kiếm và khám phá kho truyện đa dạng theo thể loại.',
     icon: (
       <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
     ),
   },
   {
     step: '03',
-    title: 'Doc & Nghe',
-    desc: 'Doc hoac nghe truyen voi AI TTS, bat cu luc nao, bat cu noi dau.',
+        title: 'Đọc & Nghe',
+        desc: 'Đọc hoặc nghe truyện với AI TTS, bất cứ lúc nào, bất cứ nơi đâu.',
     icon: (
       <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
     ),
@@ -359,9 +359,9 @@ function HowItWorksSection() {
     <section ref={ref} className="py-20 lg:py-28 bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <span className="inline-block text-xs font-semibold text-primary bg-primary/5 px-4 py-1.5 rounded-full mb-4 uppercase tracking-wider">Bat dau</span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-text-main mb-4">Chi 3 buoc don gian</h2>
-          <p className="text-text-muted text-lg max-w-2xl mx-auto">Bat dau hanh trinh doc truyen chua bao gio de den the.</p>
+          <span className="inline-block text-xs font-semibold text-primary bg-primary/5 px-4 py-1.5 rounded-full mb-4           uppercase tracking-wider">Bắt đầu</span>
+                    <h2 className="text-3xl sm:text-4xl font-extrabold text-text-main mb-4">Chỉ 3 bước đơn giản</h2>
+                    <p className="text-text-muted text-lg max-w-2xl mx-auto">Bắt đầu hành trình đọc truyện chưa bao giờ dễ đến thế.</p>
         </div>
         <div className="grid md:grid-cols-3 gap-8">
           {steps.map((s, i) => (
@@ -393,20 +393,20 @@ function HowItWorksSection() {
 function ScreenshotsSection() {
   const [active, setActive] = useState(0)
   const screenshots = [
-    { label: 'Trang chu', color: 'from-purple-400 to-blue-400' },
-    { label: 'Doc truyen', color: 'from-blue-400 to-teal-400' },
-    { label: 'Nghe truyen', color: 'from-teal-400 to-green-400' },
-    { label: 'Tim kiem', color: 'from-green-400 to-yellow-400' },
-    { label: 'Ca nhan', color: 'from-yellow-400 to-orange-400' },
+        { label: 'Trang chủ', color: 'from-purple-400 to-blue-400' },
+        { label: 'Đọc truyện', color: 'from-blue-400 to-teal-400' },
+        { label: 'Nghe truyện', color: 'from-teal-400 to-green-400' },
+        { label: 'Tìm kiếm', color: 'from-green-400 to-yellow-400' },
+        { label: 'Cá nhân', color: 'from-yellow-400 to-orange-400' },
   ]
 
   return (
     <section className="py-20 lg:py-28" style={{ background: 'linear-gradient(180deg, #ffffff 0%, #f8f4ff 100%)' }}>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <span className="inline-block text-xs font-semibold text-primary bg-primary/5 px-4 py-1.5 rounded-full mb-4 uppercase tracking-wider">Giao dien</span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-text-main mb-4">Thiet ke tinh te, de su dung</h2>
-          <p className="text-text-muted text-lg max-w-2xl mx-auto">Giao dien than thien, toi uu cho trai nghiem doc tren dien thoai.</p>
+          <span className="inline-block text-xs font-semibold text-primary bg-primary/5 px-4 py-1.5 rounded-full mb-4           uppercase tracking-wider">Giao diện</span>
+                    <h2 className="text-3xl sm:text-4xl font-extrabold text-text-main mb-4">Thiết kế tinh tế, dễ sử dụng</h2>
+                    <p className="text-text-muted text-lg max-w-2xl mx-auto">Giao diện thân thiện, tối ưu cho trải nghiệm đọc trên điện thoại.</p>
         </div>
 
         <div className="flex justify-center gap-6 overflow-x-auto pb-8">
@@ -451,8 +451,8 @@ function DownloadCTA() {
           </div>
 
           <div className="relative z-10">
-            <h2 className="text-3xl sm:text-4xl font-extrabold mb-4">San sang kham pha the gioi truyen?</h2>
-            <p className="text-white/80 text-lg mb-8 max-w-xl mx-auto">Tai E-Novel ngay hom nay va bat dau hanh trinh doc truyen tuyet voi cua ban.</p>
+                        <h2 className="text-3xl sm:text-4xl font-extrabold mb-4">Sẵn sàng khám phá thế giới truyện?</h2>
+                        <p className="text-white/80 text-lg mb-8 max-w-xl mx-auto">Tải E-Novel ngay hôm nay và bắt đầu hành trình đọc truyện tuyệt vời của bạn.</p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href={GOOGLE_PLAY_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-3 bg-white text-text-main px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-50 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5">
@@ -475,33 +475,33 @@ function DownloadCTA() {
 function Footer() {
   const [activePolicy, setActivePolicy] = useState<string | null>(null)
 
-  const disclaimerContent = `E-Novels khong phai la nha san xuat (so cap hay thu cap) cua bat ky noi dung nao tren trang web nay. Vui long gui yeu cau truc tiep den nguon noi noi dung duoc xuat ban hoac tao ra ban dau.
+  const disclaimerContent = `E-Novels không phải là nhà sản xuất (sơ cấp hay thứ cấp) của bất kỳ nội dung nào trên trang web này. Vui lòng gửi yêu cầu trực tiếp đến nguồn nơi nội dung được xuất bản hoặc tạo ra ban đầu.
 
-Chung toi la nen tang chia se noi dung cho phep nguoi dung dang tai va chia se tieu thuyet, truyen dai tap, truyen ngan va cac noi dung van hoc khac. Mac du chung toi no luc kiem duyet va xac minh tinh tuan thu, thong tin va noi dung hien thi co the khong hoan toan chinh xac hoac day du.`
+Chúng tôi là nền tảng chia sẻ nội dung cho phép người dùng đăng tải và chia sẻ tiểu thuyết, truyện dài tập, truyện ngắn và các nội dung văn học khác. Mặc dù chúng tôi nỗ lực kiểm duyệt và xác minh tính tuân thủ, thông tin và nội dung hiển thị có thể không hoàn toàn chính xác hoặc đầy đủ.`
 
-  const termsContent = `1. DO TUOI VA DIEU KIEN TRUY CAP
-- Ban phai tu 13 tuoi tro len (hoac du tuoi theo quy dinh phap luat tai noi cu tru) de su dung dich vu.
-- Neu ban duoi do tuoi truong thanh hop phap, viec su dung phai co su dong y cua nguoi giam ho.
+  const termsContent = `1. ĐỘ TUỔI VÀ ĐIỀU KIỆN TRUY CẬP
+- Bạn phải từ 13 tuổi trở lên (hoặc đủ tuổi theo quy định pháp luật tại nơi cư trú) để sử dụng dịch vụ.
+- Nếu bạn dưới độ tuổi trưởng thành hợp pháp, việc sử dụng phải có sự đồng ý của người giám hộ.
 
-2. NOI DUNG VA TRACH NHIEM
-- Nen tang cung cap tieu thuyet, truyen dai tap, truyen ngan va noi dung van hoc do nguoi dung dang tai.
-- Nguoi dung chiu trach nhiem ve viec lua chon, doc va su dung noi dung.
+2. NỘI DUNG VÀ TRÁCH NHIỆM
+- Nền tảng cung cấp tiểu thuyết, truyện dài tập, truyện ngắn và nội dung văn học do người dùng đăng tải.
+- Người dùng chịu trách nhiệm về việc lựa chọn, đọc và sử dụng nội dung.
 
-3. HANH VI BI NGHIEM CAM
-- Dang tai noi dung vi pham phap luat, ban quyen hoac quyen so huu tri tue.
-- Phat tan noi dung kich dong thu han, bao luc, quay roi hoac gay hai cho cong dong.`
+3. HÀNH VI BỊ NGHIÊM CẤM
+- Đăng tải nội dung vi phạm pháp luật, bản quyền hoặc quyền sở hữu trí tuệ.
+- Phát tán nội dung kích động thù hận, bạo lực, quấy rối hoặc gây hại cho cộng đồng.`
 
-  const privacyContent = `E-Novels cam ket bao ve quyen rieng tu cua nguoi dung. Chung toi chi thu thap luong thong tin toi thieu can thiet de van hanh dich vu va cai thien trai nghiem su dung.
+  const privacyContent = `E-Novels cam kết bảo vệ quyền riêng tư của người dùng. Chúng tôi chỉ thu thập lượng thông tin tối thiểu cần thiết để vận hành dịch vụ và cải thiện trải nghiệm sử dụng.
 
-THONG TIN CHUNG TOI THU THAP:
-- Dia chi IP: Su dung de ngan chan spam, tan cong DDoS va hanh vi lam dung he thong.
-- Cookies & du lieu truy cap: Ghi nho phien dang nhap va tuy chon nguoi dung.
-- Du lieu tai khoan (neu nguoi dung dang ky): Co the bao gom email hoac ten hien thi de xac thuc.`
+THÔNG TIN CHÚNG TÔI THU THẬP:
+- Địa chỉ IP: Sử dụng để ngăn chặn spam, tấn công DDoS và hành vi lạm dụng hệ thống.
+- Cookies & dữ liệu truy cập: Ghi nhớ phiên đăng nhập và tùy chọn người dùng.
+- Dữ liệu tài khoản (nếu người dùng đăng ký): Có thể bao gồm email hoặc tên hiển thị để xác thực.`
 
   const policies: Record<string, { title: string; content: string }> = {
     disclaimer: { title: 'Disclaimer', content: disclaimerContent },
-    terms: { title: 'Dieu khoan Su dung', content: termsContent },
-    privacy: { title: 'Chinh sach Bao mat', content: privacyContent },
+        terms: { title: 'Điều khoản Sử dụng', content: termsContent },
+        privacy: { title: 'Chính sách Bảo mật', content: privacyContent },
   }
 
   return (
@@ -530,20 +530,20 @@ THONG TIN CHUNG TOI THU THAP:
                 </div>
                 <span className="text-lg font-bold">E-Novel</span>
               </div>
-              <p className="text-gray-400 text-sm leading-relaxed max-w-sm">Nen tang doc va nghe truyen hang dau voi cong nghe AI Text-to-Speech tien tien. Doc truyen moi luc, nghe truyen moi noi.</p>
+              <p className="text-gray-400 text-sm leading-relaxed max-w-sm">Nền tảng đọc và nghe truyện hàng đầu với công nghệ AI Text-to-Speech tiên tiến. Đọc truyện mọi lúc, nghe truyện mọi nơi.</p>
             </div>
 
             <div>
-              <h4 className="font-semibold mb-4 text-sm uppercase tracking-wider text-gray-300">Phap ly</h4>
+              <h4 className="font-semibold mb-4 text-sm uppercase tracking-wider text-gray-300">Pháp lý</h4>
               <ul className="space-y-3">
                 <li><button onClick={() => setActivePolicy('disclaimer')} className="text-sm text-gray-400 hover:text-white transition-colors">Disclaimer</button></li>
-                <li><button onClick={() => setActivePolicy('terms')} className="text-sm text-gray-400 hover:text-white transition-colors">Dieu khoan Su dung</button></li>
-                <li><button onClick={() => setActivePolicy('privacy')} className="text-sm text-gray-400 hover:text-white transition-colors">Chinh sach Bao mat</button></li>
+                <li><button onClick={() => setActivePolicy('terms')} className="text-sm text-gray-400 hover:text-white                 transition-colors">Điều khoản Sử dụng</button></li>
+                                <li><button onClick={() => setActivePolicy('privacy')} className="text-sm text-gray-400 hover:text-white transition-colors">Chính sách Bảo mật</button></li>
               </ul>
             </div>
 
             <div>
-              <h4 className="font-semibold mb-4 text-sm uppercase tracking-wider text-gray-300">Lien he</h4>
+              <h4 className="font-semibold mb-4 text-sm uppercase tracking-wider text-gray-300">Liên hệ</h4>
               <ul className="space-y-3">
                 <li className="flex items-center gap-2 text-sm text-gray-400">
                   <svg className="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
