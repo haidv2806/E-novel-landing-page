@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react'
 import './App.css'
 
 const GOOGLE_PLAY_URL = 'https://play.google.com/store/apps/details?id=com.haidv2806.ENovel'
+const APP_STORE_URL = 'https://apps.apple.com/vn/app/e-novels/id6756305318'
 
 function useInView(threshold = 0.15) {
   const ref = useRef<HTMLDivElement>(null)
@@ -41,14 +42,14 @@ function Navbar() {
 
           <div className="hidden md:flex items-center gap-8">
             <a href="#features" className="text-sm font-medium text-text-muted hover:text-primary             transition-colors">Tính năng</a>
-                        <a href="#download" className="text-sm font-medium text-text-muted hover:text-primary transition-colors">Tải app</a>
-                        <a href="#contact" className="text-sm font-medium text-text-muted hover:text-primary transition-colors">Liên hệ</a>
+            <a href="#download" className="text-sm font-medium text-text-muted hover:text-primary transition-colors">Tải app</a>
+            <a href="#contact" className="text-sm font-medium text-text-muted hover:text-primary transition-colors">Liên hệ</a>
             <a href={GOOGLE_PLAY_URL} target="_blank" rel="noopener noreferrer" className="bg-primary text-white text-sm font-semibold px-5 py-2 rounded-full hover:bg-primary-dark transition-colors shadow-md hover:shadow-lg">
-                        Tải ngay
-                      </a>
-                    </div>
+              Tải ngay
+            </a>
+          </div>
 
-                    <button
+          <button
             className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle menu"
@@ -65,14 +66,14 @@ function Navbar() {
         {menuOpen && (
           <div className="md:hidden bg-white rounded-2xl shadow-xl mt-2 p-4 border border-border-light">
             <a href="#features" onClick={() => setMenuOpen(false)} className="block py-3 px-4 text-sm font-medium text-text-main hover:bg-bg-section rounded-lg             transition-colors">Tính năng</a>
-                        <a href="#download" onClick={() => setMenuOpen(false)} className="block py-3 px-4 text-sm font-medium text-text-main hover:bg-bg-section rounded-lg transition-colors">Tải app</a>
-                        <a href="#contact" onClick={() => setMenuOpen(false)} className="block py-3 px-4 text-sm font-medium text-text-main hover:bg-bg-section rounded-lg transition-colors">Liên hệ</a>
+            <a href="#download" onClick={() => setMenuOpen(false)} className="block py-3 px-4 text-sm font-medium text-text-main hover:bg-bg-section rounded-lg transition-colors">Tải app</a>
+            <a href="#contact" onClick={() => setMenuOpen(false)} className="block py-3 px-4 text-sm font-medium text-text-main hover:bg-bg-section rounded-lg transition-colors">Liên hệ</a>
             <a href={GOOGLE_PLAY_URL} target="_blank" rel="noopener noreferrer" className="block mt-2 bg-primary text-white text-sm font-semibold px-5 py-3 rounded-xl text-center hover:bg-primary-dark transition-colors">
-                    Tải ngay
-                  </a>
-                </div>
-              )}
-            </div>
+              Tải ngay
+            </a>
+          </div>
+        )}
+      </div>
     </nav>
   )
 }
@@ -96,8 +97,8 @@ function HeroSection() {
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-text-main leading-tight mb-6">
-                            Đọc truyện mọi lúc,{' '}
-                            <span className="gradient-text">nghe truyện mọi nơi</span>
+              Đọc truyện mọi lúc,{' '}
+              <span className="gradient-text">nghe truyện mọi nơi</span>
             </h1>
 
             <p className="text-lg text-text-muted leading-relaxed mb-8 max-w-lg">
@@ -106,22 +107,22 @@ function HeroSection() {
 
             <div className="flex flex-wrap gap-4">
               <a href={GOOGLE_PLAY_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 bg-text-main text-white px-6 py-3.5 rounded-xl font-semibold hover:bg-gray-800 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5">
-                <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.302 2.302a1 1 0 0 1 0 1.38l-2.302 2.302L15.394 12l2.304-2.492zM5.864 2.658L16.8 9.99l-2.302 2.302-8.634-8.634z"/></svg>
+                <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.302 2.302a1 1 0 0 1 0 1.38l-2.302 2.302L15.394 12l2.304-2.492zM5.864 2.658L16.8 9.99l-2.302 2.302-8.634-8.634z" /></svg>
                 Google Play
               </a>
-              <a href="#" className="inline-flex items-center gap-3 bg-white text-text-main px-6 py-3.5 rounded-xl font-semibold border border-border-light hover:border-primary/30 hover:shadow-lg transition-all hover:-translate-y-0.5">
-                <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+              <a href={APP_STORE_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 bg-white text-text-main px-6 py-3.5 rounded-xl font-semibold border border-border-light hover:border-primary/30 hover:shadow-lg transition-all hover:-translate-y-0.5">
+                <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" /></svg>
                 App Store
               </a>
             </div>
 
             <div className="flex items-center gap-3 mt-8">
               <div className="flex items-center gap-1 text-xs font-medium text-text-muted">
-                <svg className="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                <svg className="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                <svg className="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                <svg className="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                <svg className="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                <svg className="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" /></svg>
+                <svg className="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" /></svg>
+                <svg className="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" /></svg>
+                <svg className="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" /></svg>
+                <svg className="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" /></svg>
               </div>
               <span className="text-xs text-text-muted">Yêu thích bởi hàng ngàn độc giả</span>
             </div>
@@ -179,48 +180,48 @@ const features = [
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
     ),
-        title: 'Trình đọc tùy chỉnh',
-        desc: 'Tự do chọn font, cỡ chữ, màu nền, chế độ sáng/tối để đọc thoải mái nhất.',
+    title: 'Trình đọc tùy chỉnh',
+    desc: 'Tự do chọn font, cỡ chữ, màu nền, chế độ sáng/tối để đọc thoải mái nhất.',
     color: 'bg-purple-50 text-purple-600',
   },
   {
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" /></svg>
     ),
-        title: 'AI Text-to-Speech',
-        desc: 'Nghe truyện với giọng đọc tự nhiên từ F5-TTS, Valtec offline và System TTS.',
+    title: 'AI Text-to-Speech',
+    desc: 'Nghe truyện với giọng đọc tự nhiên từ F5-TTS, Valtec offline và System TTS.',
     color: 'bg-blue-50 text-blue-600',
   },
   {
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
     ),
-        title: 'Đọc Offline',
-        desc: 'Lưu truyện vào thiết bị với SQLite & FileSystem, đọc bất cứ lúc nào.',
+    title: 'Đọc Offline',
+    desc: 'Lưu truyện vào thiết bị với SQLite & FileSystem, đọc bất cứ lúc nào.',
     color: 'bg-green-50 text-green-600',
   },
   {
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
     ),
-        title: 'Tìm kiếm nâng cao',
-        desc: 'Full-text search, lọc theo thể loại, tác giả để tìm truyện phù hợp.',
+    title: 'Tìm kiếm nâng cao',
+    desc: 'Full-text search, lọc theo thể loại, tác giả để tìm truyện phù hợp.',
     color: 'bg-orange-50 text-orange-600',
   },
   {
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" /></svg>
     ),
-        title: 'Cộng đồng Real-time',
-        desc: 'Chat, bình luận, thảo luận trực tiếp với Socket.IO realtime.',
+    title: 'Cộng đồng Real-time',
+    desc: 'Chat, bình luận, thảo luận trực tiếp với Socket.IO realtime.',
     color: 'bg-pink-50 text-pink-600',
   },
   {
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" /></svg>
     ),
-        title: 'Dark Mode',
-        desc: 'Chế độ tối bảo vệ mắt, đọc thoải mái vào ban đêm.',
+    title: 'Dark Mode',
+    desc: 'Chế độ tối bảo vệ mắt, đọc thoải mái vào ban đêm.',
     color: 'bg-slate-100 text-slate-600',
   },
 ]
@@ -232,8 +233,8 @@ function FeaturesSection() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <span className="inline-block text-xs font-semibold text-primary bg-primary/5 px-4 py-1.5           rounded-full mb-4 uppercase tracking-wider">Tính năng</span>
-                    <h2 className="text-3xl sm:text-4xl font-extrabold text-text-main mb-4">Trải nghiệm đọc truyện toàn diện</h2>
-                    <p className="text-text-muted text-lg max-w-2xl mx-auto">Mọi thứ bạn cần để tận hưởng thế giới truyện, từ đọc đến nghe, từ online đến offline.</p>
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-text-main mb-4">Trải nghiệm đọc truyện toàn diện</h2>
+          <p className="text-text-muted text-lg max-w-2xl mx-auto">Mọi thứ bạn cần để tận hưởng thế giới truyện, từ đọc đến nghe, từ online đến offline.</p>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((f, i) => (
@@ -260,29 +261,29 @@ const ttsLevels = [
   {
     level: 'Online',
     engine: 'F5-TTS',
-        desc: 'Giọng nói AI chất lượng cao, tự nhiên nhất. Cần kết nối internet.',
-        icon: '🌐',
-        features: ['Giọng đọc tự nhiên, cảm xúc', 'Hỗ trợ nhiều giọng nói', 'Chất lượng studio'],
-        color: 'from-purple-500 to-blue-500',
-        badge: 'Chất lượng tốt nhất',
+    desc: 'Giọng nói AI chất lượng cao, tự nhiên nhất. Cần kết nối internet.',
+    icon: '🌐',
+    features: ['Giọng đọc tự nhiên, cảm xúc', 'Hỗ trợ nhiều giọng nói', 'Chất lượng studio'],
+    color: 'from-purple-500 to-blue-500',
+    badge: 'Chất lượng tốt nhất',
   },
   {
     level: 'Offline',
     engine: 'Valtec',
-        desc: 'Neural TTS chạy ngay trên thiết bị, không cần mạng.',
-        icon: '📱',
-        features: ['Không cần internet', 'Neural network trên máy', 'Tốc độ nhanh'],
-        color: 'from-blue-500 to-teal-500',
-        badge: 'Không cần mạng',
+    desc: 'Neural TTS chạy ngay trên thiết bị, không cần mạng.',
+    icon: '📱',
+    features: ['Không cần internet', 'Neural network trên máy', 'Tốc độ nhanh'],
+    color: 'from-blue-500 to-teal-500',
+    badge: 'Không cần mạng',
   },
   {
     level: 'System',
     engine: 'System TTS',
-        desc: 'Sử dụng TTS có sẵn của thiết bị, luôn sẵn sàng.',
-        icon: '⚙️',
-        features: ['Có sẵn trên mọi thiết bị', 'Tiết kiệm tài nguyên', 'Hoạt động mọi lúc'],
-        color: 'from-teal-500 to-green-500',
-        badge: 'Luôn sẵn sàng',
+    desc: 'Sử dụng TTS có sẵn của thiết bị, luôn sẵn sàng.',
+    icon: '⚙️',
+    features: ['Có sẵn trên mọi thiết bị', 'Tiết kiệm tài nguyên', 'Hoạt động mọi lúc'],
+    color: 'from-teal-500 to-green-500',
+    badge: 'Luôn sẵn sàng',
   },
 ]
 
@@ -293,8 +294,8 @@ function TTSHighlightSection() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <span className="inline-block text-xs font-semibold text-primary bg-primary/5 px-4 py-1.5 rounded-full mb-4           uppercase tracking-wider">Text-to-Speech</span>
-                    <h2 className="text-3xl sm:text-4xl font-extrabold text-text-main mb-4">3 cấp độ nghe truyện</h2>
-                    <p className="text-text-muted text-lg max-w-2xl mx-auto">Từ AI cao cấp đến TTS hệ thống, luôn có giải pháp phù hợp mọi hoàn cảnh.</p>
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-text-main mb-4">3 cấp độ nghe truyện</h2>
+          <p className="text-text-muted text-lg max-w-2xl mx-auto">Từ AI cao cấp đến TTS hệ thống, luôn có giải pháp phù hợp mọi hoàn cảnh.</p>
         </div>
         <div className="grid md:grid-cols-3 gap-6">
           {ttsLevels.map((t, i) => (
@@ -329,24 +330,24 @@ function TTSHighlightSection() {
 const steps = [
   {
     step: '01',
-        title: 'Tải app',
-        desc: 'Tải E-Novel miễn phí từ Google Play hoặc App Store.',
+    title: 'Tải app',
+    desc: 'Tải E-Novel miễn phí từ Google Play hoặc App Store.',
     icon: (
       <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
     ),
   },
   {
     step: '02',
-        title: 'Khám phá',
-        desc: 'Tìm kiếm và khám phá kho truyện đa dạng theo thể loại.',
+    title: 'Khám phá',
+    desc: 'Tìm kiếm và khám phá kho truyện đa dạng theo thể loại.',
     icon: (
       <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
     ),
   },
   {
     step: '03',
-        title: 'Đọc & Nghe',
-        desc: 'Đọc hoặc nghe truyện với AI TTS, bất cứ lúc nào, bất cứ nơi đâu.',
+    title: 'Đọc & Nghe',
+    desc: 'Đọc hoặc nghe truyện với AI TTS, bất cứ lúc nào, bất cứ nơi đâu.',
     icon: (
       <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
     ),
@@ -360,8 +361,8 @@ function HowItWorksSection() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <span className="inline-block text-xs font-semibold text-primary bg-primary/5 px-4 py-1.5 rounded-full mb-4           uppercase tracking-wider">Bắt đầu</span>
-                    <h2 className="text-3xl sm:text-4xl font-extrabold text-text-main mb-4">Chỉ 3 bước đơn giản</h2>
-                    <p className="text-text-muted text-lg max-w-2xl mx-auto">Bắt đầu hành trình đọc truyện chưa bao giờ dễ đến thế.</p>
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-text-main mb-4">Chỉ 3 bước đơn giản</h2>
+          <p className="text-text-muted text-lg max-w-2xl mx-auto">Bắt đầu hành trình đọc truyện chưa bao giờ dễ đến thế.</p>
         </div>
         <div className="grid md:grid-cols-3 gap-8">
           {steps.map((s, i) => (
@@ -389,38 +390,39 @@ function HowItWorksSection() {
   )
 }
 
-/* ─── Screenshots Carousel ─── */
 function ScreenshotsSection() {
   const [active, setActive] = useState(0)
   const screenshots = [
-        { label: 'Trang chủ', color: 'from-purple-400 to-blue-400' },
-        { label: 'Đọc truyện', color: 'from-blue-400 to-teal-400' },
-        { label: 'Nghe truyện', color: 'from-teal-400 to-green-400' },
-        { label: 'Tìm kiếm', color: 'from-green-400 to-yellow-400' },
-        { label: 'Cá nhân', color: 'from-yellow-400 to-orange-400' },
+    { src: '/promoteImage/promoteImage-1.jpg', alt: 'Screenshot 1' },
+    { src: '/promoteImage/promoteImage-2.jpg', alt: 'Screenshot 2' },
+    { src: '/promoteImage/promoteImage-3.jpg', alt: 'Screenshot 3' },
+    { src: '/promoteImage/promoteImage-4.jpg', alt: 'Screenshot 4' },
+    { src: '/promoteImage/promoteImage-5.jpg', alt: 'Screenshot 5' },
+    { src: '/promoteImage/promoteImage-6.jpg', alt: 'Screenshot 6' },
+    { src: '/promoteImage/promoteImage-7.jpg', alt: 'Screenshot 7' },
   ]
 
   return (
     <section className="py-20 lg:py-28" style={{ background: 'linear-gradient(180deg, #ffffff 0%, #f8f4ff 100%)' }}>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <span className="inline-block text-xs font-semibold text-primary bg-primary/5 px-4 py-1.5 rounded-full mb-4           uppercase tracking-wider">Giao diện</span>
-                    <h2 className="text-3xl sm:text-4xl font-extrabold text-text-main mb-4">Thiết kế tinh tế, dễ sử dụng</h2>
-                    <p className="text-text-muted text-lg max-w-2xl mx-auto">Giao diện thân thiện, tối ưu cho trải nghiệm đọc trên điện thoại.</p>
+          <span className="inline-block text-xs font-semibold text-primary bg-primary/5 px-4 py-1.5 rounded-full mb-4 uppercase tracking-wider">Giao diện</span>
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-text-main mb-4">Thiết kế tinh tế, dễ sử dụng</h2>
+          <p className="text-text-muted text-lg max-w-2xl mx-auto">Giao diện thân thiện, tối ưu cho trải nghiệm đọc trên điện thoại.</p>
         </div>
 
-        <div className="flex justify-center gap-6 overflow-x-auto pb-8">
+        <div className="flex justify-center gap-2 sm:gap-3 overflow-x-auto pb-4 snap-x px-2">
           {screenshots.map((s, i) => (
             <button
               key={i}
               onClick={() => setActive(i)}
-              className={`shrink-0 transition-all duration-500 ${active === i ? 'scale-105' : 'scale-95 opacity-60'}`}
+              className={`shrink-0 transition-all duration-500 rounded-3xl overflow-hidden snap-center outline-none border border-border-light shadow-xl ${active === i ? 'scale-105 ring-4 ring-primary/20' : 'scale-95 opacity-60 hover:opacity-80'}`}
             >
-              <div className={`w-48 h-80 sm:w-56 sm:h-96 bg-gradient-to-b ${s.color} rounded-3xl flex flex-col items-center justify-center text-white shadow-xl`}>
-                <img src="/icon.png" alt="E-Novel" className="w-12 h-12 mb-3 opacity-90" />
-                <span className="text-sm font-semibold">{s.label}</span>
-                <span className="text-xs opacity-70 mt-1">Screenshot placeholder</span>
-              </div>
+              <img
+                src={s.src}
+                alt={s.alt}
+                className="w-[160px] sm:w-[220px] h-auto object-cover"
+              />
             </button>
           ))}
         </div>
@@ -451,16 +453,16 @@ function DownloadCTA() {
           </div>
 
           <div className="relative z-10">
-                        <h2 className="text-3xl sm:text-4xl font-extrabold mb-4">Sẵn sàng khám phá thế giới truyện?</h2>
-                        <p className="text-white/80 text-lg mb-8 max-w-xl mx-auto">Tải E-Novel ngay hôm nay và bắt đầu hành trình đọc truyện tuyệt vời của bạn.</p>
+            <h2 className="text-3xl sm:text-4xl font-extrabold mb-4">Sẵn sàng khám phá thế giới truyện?</h2>
+            <p className="text-white/80 text-lg mb-8 max-w-xl mx-auto">Tải E-Novel ngay hôm nay và bắt đầu hành trình đọc truyện tuyệt vời của bạn.</p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href={GOOGLE_PLAY_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-3 bg-white text-text-main px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-50 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5">
-                <svg className="w-7 h-7" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.302 2.302a1 1 0 0 1 0 1.38l-2.302 2.302L15.394 12l2.304-2.492zM5.864 2.658L16.8 9.99l-2.302 2.302-8.634-8.634z"/></svg>
+                <svg className="w-7 h-7" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.302 2.302a1 1 0 0 1 0 1.38l-2.302 2.302L15.394 12l2.304-2.492zM5.864 2.658L16.8 9.99l-2.302 2.302-8.634-8.634z" /></svg>
                 Google Play
               </a>
-              <a href="#" className="inline-flex items-center justify-center gap-3 bg-white/10 backdrop-blur-sm text-white border border-white/20 px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/20 transition-all hover:-translate-y-0.5">
-                <svg className="w-7 h-7" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+              <a href={APP_STORE_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-3 bg-white/10 backdrop-blur-sm text-white border border-white/20 px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/20 transition-all hover:-translate-y-0.5">
+                <svg className="w-7 h-7" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" /></svg>
                 App Store
               </a>
             </div>
@@ -500,8 +502,8 @@ THÔNG TIN CHÚNG TÔI THU THẬP:
 
   const policies: Record<string, { title: string; content: string }> = {
     disclaimer: { title: 'Disclaimer', content: disclaimerContent },
-        terms: { title: 'Điều khoản Sử dụng', content: termsContent },
-        privacy: { title: 'Chính sách Bảo mật', content: privacyContent },
+    terms: { title: 'Điều khoản Sử dụng', content: termsContent },
+    privacy: { title: 'Chính sách Bảo mật', content: privacyContent },
   }
 
   return (
@@ -538,7 +540,7 @@ THÔNG TIN CHÚNG TÔI THU THẬP:
               <ul className="space-y-3">
                 <li><button onClick={() => setActivePolicy('disclaimer')} className="text-sm text-gray-400 hover:text-white transition-colors">Disclaimer</button></li>
                 <li><button onClick={() => setActivePolicy('terms')} className="text-sm text-gray-400 hover:text-white                 transition-colors">Điều khoản Sử dụng</button></li>
-                                <li><button onClick={() => setActivePolicy('privacy')} className="text-sm text-gray-400 hover:text-white transition-colors">Chính sách Bảo mật</button></li>
+                <li><button onClick={() => setActivePolicy('privacy')} className="text-sm text-gray-400 hover:text-white transition-colors">Chính sách Bảo mật</button></li>
               </ul>
             </div>
 
