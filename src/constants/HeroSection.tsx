@@ -56,9 +56,9 @@ export default function HeroSection() {
                         </div>
                     </div>
 
-                    <div className="relative flex justify-center animate-fade-in-up animation-delay-300">
+                    <div className="relative flex justify-center animate-fade-in-up animation-delay-300 overflow-visible">
                         <div className="relative">
-                            <div className="w-64 h-[500px] rounded-[3rem] p-3 animate-float scale-60 origin-top">
+                            <div className="w-[375px] h-[500px] animate-float scale-60 origin-top">
                                 <DeviceFrameset device="iPhone X" color="black" zoom={1}>
                                     <img
                                         src="/inAppScreen.png"
@@ -67,7 +67,7 @@ export default function HeroSection() {
                                     />
                                 </DeviceFrameset>
                             </div>
-                            <div className="absolute -right-40 top-20 bg-white rounded-2xl shadow-lg p-3 border border-border-light">
+                            <div className=" absolute -right-4 top-10 bg-white rounded-2xl shadow-lg p-3 border border-border-light">
                                 <div className="flex items-center gap-2">
                                     <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center">
                                         <svg className="w-4 h-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" /></svg>
@@ -78,7 +78,7 @@ export default function HeroSection() {
                                     </div>
                                 </div>
                             </div>
-                            <div className="absolute -left-6 bottom-32 bg-white rounded-2xl shadow-lg p-3 border border-border-light">
+                            <div className=" absolute bottom-32 bg-white rounded-2xl shadow-lg p-3 border border-border-light">
                                 <div className="flex items-center gap-2">
                                     <div className="w-8 h-8 bg-green-50 rounded-full flex items-center justify-center">
                                         <svg className="w-4 h-4 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>

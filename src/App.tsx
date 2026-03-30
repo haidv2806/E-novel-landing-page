@@ -1,6 +1,7 @@
 import Navbar from './constants/Navbar'
 import HeroSection from './constants/HeroSection'
 import FeaturesSection from './constants/FeaturesSection'
+import LibraryStatsSection from './constants/LibraryStatsSection'
 import TTSHighlightSection from './constants/TTSHighlightSection'
 import HowItWorksSection from './constants/HowItWorksSection'
 import ScreenshotsSection from './constants/ScreenshotsSection'
@@ -18,6 +19,7 @@ function App() {
       <Navbar />
       <HeroSection />
       <FeaturesSection />
+      <LibraryStatsSection />
       <TTSHighlightSection />
       <HowItWorksSection />
       <ScreenshotsSection />
