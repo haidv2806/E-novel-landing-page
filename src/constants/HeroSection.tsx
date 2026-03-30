@@ -1,4 +1,6 @@
 import { GOOGLE_PLAY_URL, APP_STORE_URL } from "../App"
+import { DeviceFrameset } from 'react-device-frameset'
+import 'react-device-frameset/styles/marvel-devices.min.css'
 
 export default function HeroSection() {
     return (
@@ -56,21 +58,16 @@ export default function HeroSection() {
 
                     <div className="relative flex justify-center animate-fade-in-up animation-delay-300">
                         <div className="relative">
-                            <div className="w-64 h-[500px] bg-text-main rounded-[3rem] p-3 shadow-2xl animate-float">
-                                <div className="w-full h-full bg-gradient-to-b from-bg-section to-white rounded-[2.2rem] flex flex-col items-center justify-center overflow-hidden relative">
-                                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-28 h-6 bg-text-main rounded-b-2xl"></div>
-                                    <img src="/icon.png" alt="E-Novel Logo" className="w-20 h-20 mb-4 opacity-80" />
-                                    <span className="text-lg font-bold text-text-main">E-Novel</span>
-                                    <span className="text-xs text-text-muted mt-1">Đọc & Nghe truyện</span>
-                                    <div className="mt-6 space-y-2 w-4/5">
-                                        <div className="h-3 bg-primary/10 rounded-full w-full"></div>
-                                        <div className="h-3 bg-primary/10 rounded-full w-3/4"></div>
-                                        <div className="h-3 bg-primary/10 rounded-full w-5/6"></div>
-                                        <div className="h-3 bg-primary/10 rounded-full w-2/3"></div>
-                                    </div>
-                                </div>
+                            <div className="w-64 h-[500px] rounded-[3rem] p-3 animate-float scale-60 origin-top">
+                                <DeviceFrameset device="iPhone X" color="black" zoom={1}>
+                                    <img
+                                        src="/inAppScreen.png"
+                                        alt="App"
+                                        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                                    />
+                                </DeviceFrameset>
                             </div>
-                            <div className="absolute -right-4 top-20 bg-white rounded-2xl shadow-lg p-3 border border-border-light">
+                            <div className="absolute -right-40 top-20 bg-white rounded-2xl shadow-lg p-3 border border-border-light">
                                 <div className="flex items-center gap-2">
                                     <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center">
                                         <svg className="w-4 h-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" /></svg>
